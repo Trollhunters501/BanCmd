@@ -1,0 +1,26 @@
+name: BanCmd
+main: pl.extollite.bancmd.Main
+version: "${pom.version}"
+api: ["1.0.9"]
+load: STARTUP
+authors: ["Extollite"]
+description: Ban commands
+prefix: "BanCmd"
+
+commands:
+  bancmd:
+    description: Ban Commands
+    usage: /bancmd <command> <world>
+    permission: bancmd.command
+  unbancmd:
+    description: Unban Commands
+    usage: /unbancmd <command> <world>
+    permission: bancmd.command
+
+permissions:
+  bancmd.command:
+    description: "command permission"
+    default: op
+  bancmd.bypass:
+    description: "no command blocking"
+    default: op
